@@ -6,11 +6,9 @@ set -x
 
 PACKAGES_NEEDED="\
     bat \
-    fuse \
     dialog \
     apt-utils \
-    exa \
-    libfuse2"
+    exa"
 
 if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
     if [ ! -d "/var/lib/apt/lists" ] || [ "$(ls /var/lib/apt/lists/ | wc -l)" = "0" ]; then
@@ -19,9 +17,7 @@ if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
     sudo echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
     sudo apt-get -y -q install ${PACKAGES_NEEDED}
 fi
-sudo modprobe fuse
-sudo groupadd fuse
-sudo usermod -a -G fuse "$(whoami)"
+
 ln -s $(pwd)/tmux.conf $HOME/.tmux.conf
 ln -s $(pwd)/vimrc $HOME/.vimrc
 ln -s $(pwd)/vim $HOME/.vim
