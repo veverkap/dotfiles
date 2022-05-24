@@ -31,7 +31,4 @@ rm -f $HOME/.zshrc
 ln -s $(pwd)/zshrc $HOME/.zshrc
 ln -s $(pwd)/bash_profile $HOME/.bash_profile
 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
 sudo chsh -s "$(which zsh)" "$(whoami)"
-
