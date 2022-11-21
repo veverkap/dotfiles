@@ -8,6 +8,7 @@ PACKAGES_NEEDED="\
     bat \
     dialog \
     apt-utils \
+    fd-find \
     exa"
 
 if ! dpkg -s ${PACKAGES_NEEDED} > /dev/null 2>&1; then
