@@ -104,3 +104,4 @@ alias ber="bundle exec rspec "
 alias cat=bat
 alias ls=exa
 alias ncs='gh cs code -c "$(gh cs create -r github/github --default-permissions)"'
+export SERVICEOWNERS_SKIP=1
