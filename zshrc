@@ -105,3 +105,4 @@ alias cat=bat
 alias ls=exa
 alias ncs='gh cs code -c "$(gh cs create -r github/github --default-permissions)"'
 export SERVICEOWNERS_SKIP=1
+export RUBOCOP_SKIP=1
